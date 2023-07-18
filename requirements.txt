@@ -1,0 +1,2 @@
+# Dependencies for the Tree Generator program
+pyperclip==1.8.2
