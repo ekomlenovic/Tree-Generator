@@ -2,6 +2,8 @@
 
 This program is a simple tree generator that allows you to visualize the directory structure of a selected folder. It creates a tree-like representation of folders and files within the chosen directory and displays it in a graphical user interface (GUI).
 
+![Screenshot of the Program](https://github.com/ekomlenovic/Tree-Generator/blob/main/exemple.png)
+
 ## Presentation of Script
 
 The script provides a GUI using the Tkinter library. The main window of the program includes several buttons and a text area where the generated tree will be displayed. Here's an overview of the available buttons:
