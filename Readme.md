@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```
 
 ### .exe (on windows)
-Grab the latest version from the GitHub releases tab.  
+Grab the latest version from the [GitHub releases tab](https://github.com/ekomlenovic/Tree-Generator/releases).  
 Run it and enjoy.
 
 ## Usage
