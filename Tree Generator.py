@@ -25,6 +25,9 @@ def generate_tree(start_path, indent='', root_path=None, progress=None, callback
 
         path = os.path.join(start_path, file)
 
+        if ignore_dot_var.get() and file.startswith('.'):
+            continue
+
         if index == total_elements - 1:
             marker = '└── '
             new_indent = indent + '    '
@@ -101,9 +104,15 @@ def stop_generation():
     global stop_event
     stop_event.set()
 
+def toggle_ignore_dot():
+    return
+
 window = tk.Tk()
 window.title("Tree Generator")
 window.resizable(False, False)
+
+ignore_dot_var = tk.BooleanVar(value=True)
+
 choose_button = tk.Button(window, text="Choose Folder", command=choose_folder)
 choose_button.pack(pady=10)
 
@@ -112,6 +121,10 @@ copy_button.pack(pady=10)
 
 clear_button = tk.Button(window, text="Clear", command=clear_text)
 clear_button.pack(pady=10)
+
+print('aaa')
+ignore_dot_checkbox = tk.Checkbutton(window, text="Ignore Dot", variable=ignore_dot_var, command=toggle_ignore_dot)
+ignore_dot_checkbox.pack(pady=5)
 
 text_area = scrolledtext.ScrolledText(window, width=130, height=30, wrap=tk.WORD)
 text_area.pack()
